@@ -5,7 +5,8 @@ const DB = process.env.DATABASE;
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
-    socketTimeoutMS: 50000,
+    socketTimeoutMS: 3600000,
+    connectTimeoutMS: 3600000,
   })
   .then(() => {
     console.log("connection successful");
