@@ -15,10 +15,11 @@ const NoteList: React.FunctionComponent<INoteListProps> = ({
 }) => {
   const [deleteData, setDeleteData] = React.useState<[]>([]);
 
-  async function handleDelete(id: any) {
+  async function handleDelete(note: object) {
+    console.log(note);
     // setNotes(notes.filter((note) => note.id !== id));
     await axios
-      .post("http://localhost:5000/DeleteUser/", { id })
+      .post("http://localhost:5000/DeleteUser/", { note })
       .then((res) => {
         console.log(res.data);
         // setDeleteData(res.data.handleDelete);

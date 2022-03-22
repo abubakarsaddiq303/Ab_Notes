@@ -13,6 +13,7 @@ const Header: React.FunctionComponent<IHeaderProps> = () => {
             <h1>AB Notes</h1>
           </a>
         </div>
+
         <div className={styled.btn_delete_data}>
           <Link to="/showdelete">
             <button>

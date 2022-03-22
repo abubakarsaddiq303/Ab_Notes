@@ -4,7 +4,7 @@ import styles from "../styles/Notes.module.css";
 
 interface INotesProps {
   note: Note;
-  handleDelete: (id: string) => void;
+  handleDelete: (note :object) => void;
 }
 
 const Notes: React.FunctionComponent<INotesProps> = ({
@@ -17,14 +17,17 @@ const Notes: React.FunctionComponent<INotesProps> = ({
         <div className={styles.card_title}>
           <h2>{note.title}</h2>
         </div>
+
         <div className={styles.card_text}>
           <p>{note.text}</p>
         </div>
+
         <div className={styles.card_subtitle}>
           <p>{note.date} </p>
         </div>
+
         <div className={styles.btn_card}>
-          <button onClick={() => handleDelete(note.id)}>Delete</button>
+          <button onClick={() => handleDelete(note)}>Delete</button>
         </div>
       </div>
     </div>

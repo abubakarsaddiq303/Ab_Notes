@@ -28,6 +28,7 @@ const CreateNote: React.FunctionComponent<ICreateNoteProps> = ({
     if (titleRef.current?.value === "" || textRef.current?.value === "") {
       return setError("All field are mandatory");
     }
+
     setError("");
     const data = {
       title: (titleRef.current as HTMLInputElement).value,
@@ -55,6 +56,7 @@ const CreateNote: React.FunctionComponent<ICreateNoteProps> = ({
         <div className={styles.Create_heading}>
           <h2> Create Notes</h2>
         </div>
+
         {error && <Alert className={styles.error}>{error}</Alert>}
 
         <Form className="form" onSubmit={(e) => handleSubmit(e)}>
@@ -70,6 +72,7 @@ const CreateNote: React.FunctionComponent<ICreateNoteProps> = ({
             <label style={{ padding: "9px", fontSize: "x-larger" }}>
               pick color
             </label>
+
             <input
               type="color"
               value={color}
