@@ -9,7 +9,7 @@ app.use(cors());
 
 require("./db/conn");
 
-const getuser = require("./router/getUser");
+// const getuser = require("./router/getUser");
 const postuser = require("./router/postUser");
 const deleteuser = require("./router/DeleteUser");
 
