@@ -5,7 +5,8 @@ const DB = process.env.DATABASE;
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
-    connectionTimeoutMS: 360000,
+    connectTimeoutMS: 5000,
+    useUnifiedTopology: true,
   })
   .then(() => {
     console.log("connection successful");
