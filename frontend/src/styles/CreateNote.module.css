@@ -36,9 +36,9 @@
   font-size: x-large;
   text-decoration: none;
   height: 3rem;
-
   padding-left: 1rem;
   background: transparent;
+  color: white;
 }
 .create_title input:focus {
   outline: none;
