@@ -19,7 +19,7 @@ const NoteList: React.FunctionComponent<INoteListProps> = ({
     console.log(note);
     // setNotes(notes.filter((note) => note.id !== id));
     await axios
-      .post("http://localhost:5000/DeleteUser/", { note })
+      .post("https://ab-notes-backend.vercel.app/DeleteUser/", { note })
       .then((res) => {
         console.log(res.data);
         // setDeleteData(res.data.handleDelete);
