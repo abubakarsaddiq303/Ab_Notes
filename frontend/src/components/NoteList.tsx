@@ -33,7 +33,7 @@ const NoteList: React.FunctionComponent<INoteListProps> = ({
   React.useEffect(() => {
     async function getData() {
       await axios
-        .get("http://localhost:5000/getuser/")
+        .get("https://ab-notes-backend.vercel.app/getuser/")
         .then((res) => {
           console.log(res.data);
           setData(res.data.getData);
