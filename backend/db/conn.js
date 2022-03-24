@@ -6,7 +6,7 @@ mongoose
   .connect(DB, {
     useNewUrlParser: true,
 
-    serverSelectionTimeoutMS: 100000,
+    // serverSelectionTimeoutMS: 100000,
   })
   .then(() => {
     console.log("connection successful");

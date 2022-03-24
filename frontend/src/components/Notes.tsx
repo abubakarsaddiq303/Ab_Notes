@@ -4,7 +4,7 @@ import styles from "../styles/Notes.module.css";
 
 interface INotesProps {
   note: Note;
-  handleDelete: (note :object) => void;
+  handleDelete: (note: object) => void;
 }
 
 const Notes: React.FunctionComponent<INotesProps> = ({
